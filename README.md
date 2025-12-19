@@ -1,36 +1,62 @@
-# 🚀 Trello to Release Notes: Automação de Fluxo de Dados
+# 🚀 Trello to HESK Automation: RPA de Release Notes
 
-Este projeto foi desenvolvido para resolver um problema real: o tempo gasto manualmente para compilar atualizações de software. Utilizei **Python** para criar um pipeline que extrai dados da **API do Trello**, organiza-os em **Excel** e os transforma em uma **interface HTML** pronta para o usuário final.
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)](https://trello.com/)
 
-> **Impacto:** Redução de tarefas manuais e garantia de que nenhuma atualização seja publicada sem o protocolo correto ou imagem de evidência.
+> **Status do Projeto:** Concluído ✅
+
+Este projeto nasceu para resolver uma dor real no meu cotidiano profissional: o processo manual, lento e repetitivo de compilar atualizações de software. Utilizei **Python** para criar um pipeline automatizado que extrai dados da **API do Trello**, organiza-os via **Pandas** e os transforma em uma interface **HTML** pronta para publicação no sistema HESK.
+
+**📈 Impacto:** Automação completa do fluxo quinzenal, garantindo padronização visual e 0% de erro humano na transferência de dados.
 
 ---
 
 ## 🛠️ Tecnologias e Conceitos Aplicados
-Como desenvolvedora júnior, foquei em aplicar conceitos essenciais de engenharia de software neste projeto:
 
-* **Consumo de APIs REST:** Uso da biblioteca `requests` para GET de dados, lidando com autenticação via Token/Key.
-* **Manipulação de Dados:** Uso de `Pandas` para estruturação de dados e `Openpyxl` para formatação de planilhas.
-* **Lógica de Automação:** Script orquestrador que conecta diferentes módulos do sistema.
-* **Gestão de Variáveis de Ambiente:** Uso de `.env` para proteção de dados sensíveis (Segurança).
-* **Frontend Dinâmico:** Geração de HTML via código, aplicando CSS inline para garantir a formatação no destino final.
+Como desenvolvedora junior, foquei em aplicar conceitos sólidos de engenharia de software:
 
-## 📁 Estrutura do Repositório
-O projeto é modularizado para facilitar a manutenção:
-- `relatorio.py`: Módulo de extração (Trello -> DataFrame -> Excel).
-- `nota.py`: Módulo de transformação (Excel -> HTML).
-- `roda_tudo.py`: Script principal que executa o fluxo completo.
-
-## ⚙️ Como rodar o projeto
-1. Instale as dependências: `pip install -r requirements.txt`
-2. Configure suas chaves do Trello no arquivo `.env` (veja `.env.example`).
-3. Execute o comando: `python roda_tudo.py`
-
-## 💡 Aprendizados
-Durante o desenvolvimento, superei desafios como:
-- **Tratamento de exceções:** Garantir que o código não pare caso um card esteja sem solicitante ou sem imagem.
-- **Tratamento de Strings:** Formatação de textos vindos da descrição do Trello para ficarem legíveis no HTML.
-- **Experiência do Usuário (UX):** Criação de uma barra de progresso (`tqdm`) para dar feedback visual durante a extração dos dados.
+* **🌐 Consumo de APIs REST:** Uso da biblioteca `requests` para extração de dados, lidando com autenticação e endpoints dinâmicos.
+* **📊 Manipulação de Dados:** Uso de `Pandas` para estruturação e `Openpyxl` para formatação avançada de planilhas.
+* **🔒 Segurança:** Gestão de variáveis de ambiente com `.env` para proteção de Tokens e chaves de API.
+* **🎨 Frontend Dinâmico:** Geração de estruturas HTML via código com CSS inline para compatibilidade total.
 
 ---
-**Desenvolvido por Marcelle Santos**
+
+## 📁 Estrutura do Repositório
+
+O projeto é modularizado para facilitar a manutenção e escalabilidade:
+
+| Arquivo | Função |
+| :--- | :--- |
+| `relatorio.py` | Extração de dados (Trello ➡️ DataFrame ➡️ Excel). |
+| `nota.py` | Transformação de dados (Excel ➡️ HTML). |
+| `roda_tudo.py` | Script orquestrador (Execução do fluxo completo). |
+
+---
+
+## 💡 Aprendizados e Desafios
+
+Durante o desenvolvimento, superei desafios técnicos que elevaram meu nível como programadora:
+* **Tratamento de Exceções:** Implementação de verificações para garantir que o código não pare caso um card esteja incompleto ou sem imagem.
+* **UX no Terminal:** Adição da biblioteca `tqdm` para exibir uma barra de progresso, oferecendo feedback visual durante a execução.
+* **Sanitização de Strings:** Tratamento de caracteres especiais e formatação de textos vindos do Trello para exibição limpa no HTML.
+
+---
+
+## ⚙️ Como Rodar o Projeto
+
+1. Clone o repositório:
+   ```bash
+   git clone [https://github.com/acellesantos/trello-to-hesk-automation.git](https://github.com/acellesantos/trello-to-hesk-automation.git)
+2. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+3. Configure suas credenciais no arquivo `.env` (baseie-se no `.env.example`).
+4. Execute o orquestrador:
+   ```bash
+   python roda_tudo.py
+
+---
+
+<p align="center">Desenvolvido com ☕ e 🐍 por <b>Marcelle Santos</b></p>

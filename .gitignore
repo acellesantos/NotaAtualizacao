@@ -1,3 +1,14 @@
+# Ignorar ambiente virtual
+venv/
+.venv/
+
+# Ignorar arquivos de configuração sensíveis
 .env
-__pycache__/
-*.xlsx
+
+# Ignorar os outputs do código (mantendo as pastas locais mas não no GitHub)
+Planilhas/*.xlsx
+Notas/*.html
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
